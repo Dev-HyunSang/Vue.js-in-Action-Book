@@ -10,7 +10,7 @@ var webstore = new Vue({
           image: "assets/images/product-fullsize.png",
         },
     },
-    filter: {
+    filters: {
       formatPrice: function(price) {
         if(!parseInt(price)) { return ''; }
         if(price > 99999) {
