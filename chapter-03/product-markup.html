@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>상품 마크업 추가하기</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <main style="text-align: center;">
+        <div class="row product" id="app">
+            <div class="col">
+                <figure>
+                    <img v-bind:src="product.image">
+                </figure>
+            </div>
+            <div class="col col-expand">
+                <h1 v-text="product.title"></h1>
+                <p v-html="product.description"></p>
+                <p class="price">
+                    {{ product.price | formatPrice }}
+                </p>
+                <button class="btn btn-primary btn-lg" v-on:click="addToCart">
+                    장바구니 담기
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="./product-daSta.js" type="text/javascript"></script>
+</body>
+</html>
