@@ -10,5 +10,10 @@ var webstore = new Vue({
           image: "assets/images/product-fullsize.png",
         },
         cart: []
-    }
+    },
+    methods: {
+      addToCart: function() {
+          this.addToCart.push(this.product.id);
+      }
+  }
 });
